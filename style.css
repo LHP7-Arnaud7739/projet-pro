@@ -6,3 +6,21 @@ height: 300px;
 
 
 }
+.boutons{
+    box-shadow: 5px 5px 5px black;
+
+}
+.corps{
+height: 2000px;
+
+}
+.photo{
+height: 30%;
+width: 30%;
+
+}
+.logo{
+
+    height: 10%;
+    width: 10%;
+}
