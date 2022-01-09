@@ -1,0 +1,64 @@
+header {
+    background: url(img/grey-spa-background-concept-palm-260nw-1696238611.jpg);
+    height: 450px;
+    font-family: Yeon Sung;
+    background-repeat: no-repeat;
+    background-position: 0px 0px,
+        center;
+    background-size: 100% 100%;
+
+}
+
+body {
+    font-family: Yeon Sung;
+    background-color: #ffffff;
+
+}
+
+
+
+
+.navbar {
+    background: url(img/img_navbar.jpg);
+}
+
+.nameSite {
+    margin-left: 1000px;
+    vertical-align: top;
+
+
+}
+
+
+.boutons {
+    box-shadow: 10px 10px 10px rgb(0, 0, 0);
+    background-color: beige;
+
+}
+
+.corps {
+    height: 500px;
+
+}
+
+.photo {
+    height: 30%;
+    width: 30%;
+
+}
+
+.logo {
+    margin-left: -100px;
+    height: 20%;
+    width: 20%;
+
+}
+
+footer {
+    background: url(../assets/img/img_navbar.jpg);
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    height: 150px;
+}
