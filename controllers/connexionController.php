@@ -1,6 +1,6 @@
 <?php
-$login = '$2a$12$17pm1LNtoXmkEEIPk5jZnur1lyGl0mxaUASuQ2C7CHlr2peOt7h7S';
-$password = '$2a$12$XgX1smkbHgiyFkGhgHUKLOFcwTgzO6esk1tLKQSj9AVErl8/Edh8O';
+$login = 'Arnaud7739';
+$password = 'Arnaud7739';
 
 
 

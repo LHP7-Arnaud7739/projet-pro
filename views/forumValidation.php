@@ -1,3 +1,9 @@
+<?php
+require("../controllers/indexController.php");
+require("../controllers/connexionController.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -5,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reflexologie</title>
+    <title>Projet Pro Arnaud P</title>
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -26,13 +32,13 @@
             <a href="aPropos.php" class="text-white btn d-flex justify-content-end boutons m-2" type="button" value="A Propos" style="background-color:green;">A Propos</a>
 
             <a class="text-white btn d-flex justify-content-end boutons m-2 nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:green;">
-           Préstations
-          </a>
-          <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="d-flex  m-2 dropdown-item " href="reflexologiePlantaire.php">Réflexologie plantaire</a></li>
-            <li><a class="d-flex  m-2 dropdown-item " href="hypnose.php">Hypnose</a></li>
-            <li><a class="d-flex  m-2 dropdown-item " href="massageBienEtre.php">Massage bien-être</a></li>
-          </ul>
+                Préstations
+            </a>
+            <ul class=" dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="d-flex  m-2 dropdown-item " href="reflexologiePlantaire.php">Réflexologie plantaire</a></li>
+                <li><a class="d-flex  m-2 dropdown-item " href="hypnose.php">Hypnose</a></li>
+                <li><a class="d-flex  m-2 dropdown-item " href="massageBienEtre.php">Massage bien-être</a></li>
+            </ul>
             <a href="tarifs.php" class="text-white btn d-flex justify-content-end boutons m-2" type="button" value="Tarifs" style="background-color:green;">Tarifs</a>
             <a href="forum.php" class="text-white btn d-flex justify-content-end boutons m-2" type="button" value="Forum" style="background-color:green;">Forum</a>
         </div>
@@ -49,44 +55,21 @@
         </div>
     </header>
 
+    <div class="text-center p-5">
+        <h1>
+            Bienvenue <? $login?></h1>
+         
 
-
-    <div class="corps ">
-
-
-
-        <h1 class="text-center">LA REFLEXOLOGIE PLANTAIRE</h1>
-        <div>
-          <h4>
-            <p> La réflexologie plantaire était déjà pratiquée il y 4000 ans par les égyptiens et au IV siècle en chine, un acupuncteur l’appelait l’acupuncture sans aiguille.</p>
-
-            <p> La réflexologie plantaire commence par un massage de détente qui permet une complète relaxation.</p>
-
-            <p> Les différents organes du corps se retrouvent sur les pieds et le massage de ces zones permet d’améliorer le fonctionnement des organes concernés.<br> La réflexologie plantaire consiste à presser des points réflexes précis des pieds afin de déclencher des réactions salutaires dans d’autres parties de l’organisme.<br> La réflexologie redonne au corps ses moyens d’auto-guérison naturelle.</p>
-
-            <p>La réflexologie plantaire va soulager constipation, migraine, effets secondaires de médicaments et maladies, problèmes de peau, fatigue passagère et chronique,<br> dépression, nervosité, douleurs dorsales et mille autres désagréments qui empoisonnent la vie au quotidien.</p>
-
-            <p>Les chakras se retrouvent également représentés sur les pieds et leur stimulation pendant le massage de réflexologie plantaire, associée aux huiles essentielles adéquates fait merveille.<br> Des chakras non alignés dérèglent l’organisme.</p>
-
-            <p> L’association avec la réflexologie plantaire permet donc un réalignement des chakras tout en rééquilibrant le corps.</p>
-
-            <p> Les méridiens sont des canaux énergétiques qui parcourent l’ensemble du corps tout comme les veines, les artères ou la lymphe.</p>
-
-            <p> La pression locale de points précis permet d’avoir une action sur différentes parties du corps. Les acupuncteurs utilisent ces points précis. Dans le cadre de la réflexologie plantaire,<br> on peut y associer les méridiens qui parcourent les pieds ou faire un massage complet uniquement des méridiens quand l’énergie corporelle est vraiment déficiente.<br> Ce massage dynamise, équilibre et relaxe de façon merveilleuse.</p>
-</h4>
-        </div>
-        <a href="../index.php" type="submit" value="ok" class="btn btn-success ">Retour </a>
-
+            <div>
+                <a href="../views/connexion.php" type="submit" value="ok" class="btn btn-success ">Connectez Vous </a>
+                
+                <a href="../views/forunInscription.php" type="submit" value="ok" class="btn btn-success ">Inscrivez Vous </a>
+       
+    </div>
     </div>
 
-
-
-
-
-
-
-    <!-- JAVASCRIPT -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+<!-- JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
  
 <!-- FOOTER -->

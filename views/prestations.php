@@ -1,7 +1,5 @@
 <?php
-require '../controllers/detailsController.php';
-require '../controllers/indexController.php';
-require_once '../data/array.php';
+require_once '../controllers/indexController.php'
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +10,6 @@ require_once '../data/array.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAGE TEST INDEX</title>
-    <link rel="stylesheet" href="../assets/css/lightbox.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- cdn -->
@@ -26,12 +23,10 @@ require_once '../data/array.php';
     <div class="row d-sm-block sticky-top  ">
         <div class="col navbar border border-dark">
 
-            <a href="../index.php" class="text-white btn d-flex justify-content-end boutons m-4" type="button" value="Accueil" style="background-color:green;">Accueil</a>
-
-            <a href="aPropos.php" class="text-white btn d-flex justify-content-end boutons m-2" type="button" value="A Propos" style="background-color:green;">A Propos</a>
-
-            <a href="tarifs.php" class="text-white btn d-flex justify-content-end boutons m-2" type="button" value="Tarifs" style="background-color:green;">Tarifs</a>
-            <a href="forum.php" class="text-white btn d-flex justify-content-end boutons m-2" type="button" value="Forum" style="background-color:green;">Forum</a>
+            <a href="../index.php" class="text-white btn boutons m-3 " type="button" value="Accueil" style="background-color:green;">Accueil</a>
+            <a href="aPropos.php" class="text-white btn boutons " type="button" value="A Propos" style="background-color:green;">A Propos</a>
+            <a href="tarifs.php" class="text-white btn boutons " type="button" value="Tarifs" style="background-color:green;">Tarifs</a>
+            <a href="forum.php" class="text-white btn boutons " type="button" value="Forum" style="background-color:green;">Forum</a>
         </div>
     </div>
     <header class="header border border-dark">
@@ -46,21 +41,38 @@ require_once '../data/array.php';
             </div>
         </div>
     </header>
-    <!-- DEBUT TABLEAU 2 D -->
-    <div class="mt-5 row row-cols-1 row-cols-md-3 g-4">
-        <?php foreach ($arrayReflexo as $event) { ?>
-            <div class="col">
-                <div class="  text-center card">
-                    <img src="../assets/img/<?= $event["picture"] ?>" class="photoCardCat card-img-top" alt="...">
-                    <div class="card-body">
-                        <h2 class="card-title"><?= $event['name'] ?></h2>
-                        <p class="overflow-scroll card-text"><?= $event['description'] ?></p>
-                        <h3 class="card-text">Temps de la séance : <?= $event['time'] ?><br> Prix de la séance : <?= $event['price'] ?> </h3>
+
+    <!-- RECUPERATION DU TABLEAU "arrayReflo" -->
+    <?php foreach ($arrayReflexo as $event) { ?>
+
+        <div class=" text-center justify-content-center mt-5 row">
+            <div class="card boutons col-5 " style="width: 70rem; ">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="../assets/img/<?= $event["picture"] ?>" class="imgTab img-fluid rounded-start " alt="...">
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="card-body">
+                            <h3 class="card-title"><?= $event["name"] ?></h3>
+                            <h5 class="card-text m-5"><?= $event["intro"] ?></h5>
+                            <div class="p-2">Temps de la séance 
+                                <?= $event["time"] ?>
+                            </div>
+                            <div class="">A partir de
+                                <?= $event["price"] ?>
+                            </div>
+                            <div class="position-absolute bottom-0 end-0 m-5">
+                                <a class="boutons btn text-white" type="button" style="background-color:green;" href="../views/testTableau2D.php<?= $event['id'] ?>">+ d'info</a>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        <?php } ?>
-    </div>
+        </div>
+
+    <?php } ?>
+
 
     <!-- FOOTER -->
     <footer class="border border-secondary">
@@ -130,7 +142,6 @@ require_once '../data/array.php';
     </footer>
     <!-- Footer end -->
 
-    <script src="../assets/js/lightbox-plus-jquery.js"></script>
 
     <script src="../assets/script/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
