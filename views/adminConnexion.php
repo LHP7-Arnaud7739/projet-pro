@@ -1,7 +1,13 @@
 <?php
+require '../adminConfig.php';
+require '../controllers/adminConnexionController.php'
 
-require '../data/array.php';
+
+
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -28,7 +34,7 @@ require '../data/array.php';
             <a href="../index.php" class="fs-2 col-2 text-center text-dark" type="button" value="Accueil">Accueil</a>
             <a href="aPropos.php" class="fs-2 col-2 text-center text-dark" type="button" value="A Propos">A Propos</a>
             <a href="tarifs.php" class="fs-2 col-2 text-center text-dark" type="button" value="Tarifs">Tarifs</a>
-            <a href="../views/adminConnexion.php" class="fs-2 col-2 text-center text-dark" type="button" value="Forum">Ajout Presta</a>
+            <a href="addPresta.php" class="fs-2 col-2 text-center text-dark" type="button" value="Forum">Ajout</a>
         </div>
     </div>
     <header class="header border border-dark">
@@ -44,31 +50,46 @@ require '../data/array.php';
         </div>
     </header>
 
-    <div class="d-flex justify-content-center mt-4">
-        <h2>Bienvenue ici vous trouverez tous les soins de réflexologies, massages et hypnoses selon vos problémes </h2>
-    </div>
-    <!-- CARDS -->
-    <div class="d-flex justify-content-evenly">
+    <body>
+    <h1 class="text-center p-5">Connexion ADMIN</h1>
+            <form action="" method="POST">
 
-        <div class="d-flex justify-content-center category mt-4 row  row-cols-md-3 g-4">
-            <?php foreach ($arrayCat as $cat) { ?>
-                <div class="col">
-                    <div class="boutons text-center card">
-                        <img src="../assets/img/<?= $cat["pictureCat"] ?>" class="border border-dark photoCardCat card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $cat["nameCat"] ?></h5>
-                            <p class="card-text"><?= $cat["introCat"] ?></p>
-                        </div>
-                        <div class="card-body">
-                            <a class="boutons btn btn-outline-success text-dark" type="button" href="prestations.php">+ d'info</a>
-                        </div>
-                    </div>
+                <div class="text-center p-4 ">
+                    <label><b>Login</b></label>
                 </div>
-            <?php } ?>
-        </div>
-    </div>
+                <div class="text-center">
+                    <input value="<?= isset($_POST['login']) ? htmlspecialchars($_POST["login"]) : ""   ?>" type="text" name="login">
+                    <div class="text-center"> <span class="text-danger"><?=
+                        $arrayError["login"] ?? " ";
+                        ?></span></div>
+                </div>
+                <div class="text-center p-4">
+                    <label><b>Password</b></label>
+                </div>
+                <div class="text-center">
+                    <input value="<?= isset($_POST['password']) ? htmlspecialchars($_POST["password"]) : ""   ?>" type="password" name="password">
+                    <div class="text-center"> <span class="text-danger"><?=
+                        $arrayError["password"] ?? " ";
+                        ?></span> </div>
+                </div>
+                <div class="text-center p-5 ">
+                    <input class="boutons btn btn-outline-success" type="submit" name="btn-submit" value="CONNEXION">
+
+
+                </div>
+            </form>    
+
+
+    </body>
+
+
+
+        <!-- JAVASCRIPT -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
     <!-- FOOTER -->
-    <footer class="footerHome border border-secondary">
+    <footer class="footerTarifs border border-secondary">
         <div class="row text-center">
             <div class="p-4 vertical col-4 ">
                 <p class="adresse">COORDONNEES</p>

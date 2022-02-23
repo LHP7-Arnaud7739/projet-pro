@@ -20,8 +20,12 @@ body {
     height: 100%;
 }
 
+.category{
+    width:100rem ;
 
+}
 .navbar {
+    height: 30%;
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,1) 1%, rgba(206,206,206,1) 100%);
 }
@@ -36,8 +40,10 @@ height: 500px;
 }
 
 .boutons {
-    box-shadow: 5px 5px 5px rgb(0, 0, 0);
-   
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 1%, rgba(206,206,206,1) 100%);
+
+
 }
 
 
@@ -54,7 +60,7 @@ height: 500px;
     width: 80%;
 }
 .logo {
-    margin-left: -100px;
+    margin-left: -80px;
     height: 20%;
     width: 20%;
 }
@@ -63,7 +69,7 @@ height: 500px;
     height: 400px;
 }
 
-footer {
+.footerHome {
     /* Height of the footer */
     flex-shrink: 0;
     background: rgb(206,206,206);
@@ -72,9 +78,30 @@ footer {
     left: 0;
     bottom: 0;
     margin-bottom: 0;
-    margin-top: 80rem;
+    margin-top: 10rem;
 }
-
+.footerApropos{
+    /* Height of the footer */
+    flex-shrink: 0;
+    background: rgb(206,206,206);
+    background: linear-gradient(0deg, rgba(206,206,206,1) 39%, rgba(255,255,255,1) 100%);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    margin-top: 10rem;
+}
+.footerTarifs{
+    /* Height of the footer */
+    flex-shrink: 0;
+    background: rgb(206,206,206);
+    background: linear-gradient(0deg, rgba(206,206,206,1) 39%, rgba(255,255,255,1) 100%);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    margin-top: 50rem;
+}
 .adresse {
     font-size: x-large;
 }
@@ -102,5 +129,32 @@ footer {
     width: 70rem;
 }
 .photoCardCat{
-    height: 40rem;
+    height: 30rem;
+    width: 30rem;
+}
+.cardTarif{
+    width: 20rem;
+    height: 25rem;
+}
+.imgTarif{
+    width: 15rem;
+    height: 15rem;
+}
+.modalTarifs{
+    height: 100%;
+    width: 100%;
+}
+#imgPreviewPicture {
+    width: 150px;
+    max-height: 150px;
+  
+}
+#imgPreviewMini {
+    width: 150px;
+    max-height: 150px;
+  
+}
+.upload {
+    height: 600px;
+    box-shadow: 6px 6px 0px rgb(237, 233, 233)k;
 }

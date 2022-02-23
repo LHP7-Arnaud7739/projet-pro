@@ -15,9 +15,9 @@ $arrayReflexo = [
                          En effet, le pied est la représentation miniaturisée du corps humain: à chaque zone réflexe correspond un organe, une glande ou une partie du corps. Ce système ostéo-articulaire est maintenu et fonctionne grâce à un ensemble de muscles et de ligaments afin de maintenir en équilibre la masse totale du corps. La boucle réflexe va envoyer des signaux au niveau du système nerveux central qui lui, va renvoyer des signaux au niveau de l organe ou de la glande, de la région en dysfonction. Un toucher spécifique appliqué sur les zones réflexes permet de localiser des tensions et autres dysfonctionnements.
                          L activation de certains points par simple pression permet d agir sur les organes en déséquilibre ou encrassés afin d améliorer leur état ou les redynamiser.
                          L objectif du thérapeute est donc d’accompagner l organisme pour obtenir une autorégulation et une autoguérison.',
-        
+
         'bienfaits' => '',
-        'contre-indication' => 'nflammation des pieds
+        'contre-indication' => 'inflammation des pieds      
 
         – Entorses, blessures ou traumatisme du pied
         
@@ -88,11 +88,11 @@ $arrayReflexo = [
         'contre-indication' => '',
         'picture' => 'massage-drainant.jpeg',
     ],
-    
+
     [
         'id' => '6',
         'name' => 'Massage bien-être',
-        'place' => '<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.42217883675!2d0.3512219827270549!3d49.61012710423186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e040aabdba6e73%3A0xdb80f9cdf6d2b68c!2s98%20Rte%20des%20H%C3%AAtres%2C%2076110%20Manneville-la-Goupil%2C%20France!5e0!3m2!1sfr!2sbe!4v1642339633796!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',            
+        'place' => '<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.42217883675!2d0.3512219827270549!3d49.61012710423186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e040aabdba6e73%3A0xdb80f9cdf6d2b68c!2s98%20Rte%20des%20H%C3%AAtres%2C%2076110%20Manneville-la-Goupil%2C%20France!5e0!3m2!1sfr!2sbe!4v1642339633796!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',
         'price' => ' 25€ et 55€',
         'time' => 'entre 20 min et 60 min',
         'intro' => '',
@@ -116,6 +116,30 @@ $arrayReflexo = [
         'contre-indication' => '',
         'picture' => 'hypnose_clé.jpeg',
     ],
+    [
+        'id' => '8',
+        'name' => 'Auriculothérapie',
+        'place' => '<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.42217883675!2d0.3512219827270549!3d49.61012710423186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e040aabdba6e73%3A0xdb80f9cdf6d2b68c!2s98%20Rte%20des%20H%C3%AAtres%2C%2076110%20Manneville-la-Goupil%2C%20France!5e0!3m2!1sfr!2sbe!4v1642339633796!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',            'price' => '40 €',
+        'price' => '40 €',
+        'time' => '45 min',
+        'intro' => 'En stimulant des points au niveau des pavillons de l oreille, l auriculothérapie permet de soulager migraines, addictions, états anxieux et douleurs.',
+        'description' => 'L auriculothérapie consiste à détecter le point d alarme responsable de la douleur de la zone en question. Le système nerveux véhicule l information de dysharmonie jusqu à l oreille, le pavillon auriculaire servant ici de récepteur. La correction consiste à agir sur le point douloureux.',
+        'bienfaits' => '',
+        'contre-indication' => '',
+        'picture' => 'image-oreille_1.jpeg',
+    ],
+    [
+        'id' => '9',
+        'name' => 'Bougie Hopi',
+        'place' => '<iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.42217883675!2d0.3512219827270549!3d49.61012710423186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e040aabdba6e73%3A0xdb80f9cdf6d2b68c!2s98%20Rte%20des%20H%C3%AAtres%2C%2076110%20Manneville-la-Goupil%2C%20France!5e0!3m2!1sfr!2sbe!4v1642339633796!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>',            'price' => '40 €',
+        'price' => '40 €',
+        'time' => '45 min',
+        'intro' => 'Bougies auriculaires : Pour une hygiène de l oreille 100% naturelle.Découvrez la relaxation profonde et fascinante proposée par les Bougies Hopi®! Ce procédé d hygiène naturel et artisanal est à la fois un allié idéal pour l hygiène de vos oreilles, et une source de bien-être et de relaxation.',
+        'description' => 'Les bougies Hopi constituent un moyen 100% naturel pour l hygiène des oreilles. Elles permettent de débarrasser le conduit auditif des sécrétions de cire, et de prévenir, voire soigner, les otites, les acouphènes, certaines migraines ou encore les bouchons de cérumen.',
+        'bienfaits' => '',
+        'contre-indication' => '',
+        'picture' => 'hopi.jpeg',
+    ],
 
 
 ];
@@ -126,20 +150,32 @@ $arrayCat = [
         'nameCat' => 'Reflexologie ',
         'introCat' => 'Vous trouverez ici les differentes prestations de reflexologie',
         'pictureCat' => 'massage-pied1.jpg',
-        ],
+    ],
 
-        [
-            'idCat' => '1',
-            'nameCat' => 'Hypnose',
-            'introCat' => 'Découvrez ce que l hypnose peut vous apporter ',
-            'pictureCat' => 'hypnose_clé.jpeg',
-            ],
+    [
+        'idCat' => '2',
+        'nameCat' => 'Hypnose',
+        'introCat' => 'Découvrez ce que l hypnose peut vous apporter ',
+        'pictureCat' => 'hypnose_clé.jpeg',
+    ],
 
-            [
-                'idCat' => '1',
-                'nameCat' => 'Massages ',
-                'introCat' => 'Decouvrez les differents massage',
-                'pictureCat' => 'massage-dos.jpg',
-                ],
-        ];
+    [
+        'idCat' => '3',
+        'nameCat' => 'Massages ',
+        'introCat' => 'Decouvrez les differents massage',
+        'pictureCat' => 'massage-dos.jpg',
+    ],
+    [
+        'idCat' => '4',
+        'nameCat' => 'Auriculothérapie',
+        'introCat' => 'Avec des aimants ',
+        'pictureCat' => 'auriculothérapie.jpeg',
+    ],
 
+    [
+        'idCat' => '5',
+        'nameCat' => 'Bougie Hopi ',
+        'introCat' => 'Methode de relaxation',
+        'pictureCat' => 'hopi.jpeg',
+    ],
+];

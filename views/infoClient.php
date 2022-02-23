@@ -1,8 +1,8 @@
 <?php
 
-require '../data/array.php';
-?>
+require_once '../controllers/infoPatientController.php';
 
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,63 +10,132 @@ require '../data/array.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAGE TEST INDEX</title>
-    <link rel="stylesheet" href="../assets/css/lightbox.css">
+    <title>Accueil</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- cdn -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css%22%3E">
+
+    <!-- BOOTSTRAP ICONE -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 
     <!-- STYLE.CSS -->
-    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/style.css">
 </head>
 
 <body>
     <div class="row d-sm-block sticky-top  ">
-        <div class="navbar border border-dark">
-
-            <a href="../index.php" class="fs-2 col-2 text-center text-dark" type="button" value="Accueil">Accueil</a>
+        <div class="col navbar border border-dark">
+        <a href="../index.php" class="fs-2 col-2 text-center text-dark" type="button" value="Accueil">Accueil</a>
             <a href="aPropos.php" class="fs-2 col-2 text-center text-dark" type="button" value="A Propos">A Propos</a>
             <a href="tarifs.php" class="fs-2 col-2 text-center text-dark" type="button" value="Tarifs">Tarifs</a>
-            <a href="../views/adminConnexion.php" class="fs-2 col-2 text-center text-dark" type="button" value="Forum">Ajout Presta</a>
+            <a href="pageInscription.php" class="fs-2 col-2 text-center text-dark" type="button" value="Forum">Forum</a>
         </div>
     </div>
     <header class="header border border-dark">
         <!-- LOGO -->
         <div class="">
-            <a class="" href="../index.php"><input class="logo" type="image" src="../assets/img/mon_logo-removebg-preview.png" value="Accueil"></a>
+            <a class="" href="../index.php"><input class="logo" type="image" src="../assets/img/mon_logo-removebg-preview.png" value="Accuil"></a>
+        </div>
+        <!-- FIN LOGO -->
+        <div>
+            <h1 class="nameSite"> <strong>BIEN ÊTRE DES PIEDS À LA TÊTE </strong></h1>
 
-            <!-- FIN LOGO -->
-            <div>
-                <h1 class="nameSite"> <strong>BIEN ÊTRE DES PIEDS À LA TÊTE </strong></h1>
-
-            </div>
         </div>
     </header>
 
-    <div class="d-flex justify-content-center mt-4">
-        <h2>Bienvenue ici vous trouverez tous les soins de réflexologies, massages et hypnoses selon vos problémes </h2>
-    </div>
-    <!-- CARDS -->
-    <div class="d-flex justify-content-evenly">
 
-        <div class="d-flex justify-content-center category mt-4 row  row-cols-md-3 g-4">
-            <?php foreach ($arrayCat as $cat) { ?>
-                <div class="col">
-                    <div class="boutons text-center card">
-                        <img src="../assets/img/<?= $cat["pictureCat"] ?>" class="border border-dark photoCardCat card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $cat["nameCat"] ?></h5>
-                            <p class="card-text"><?= $cat["introCat"] ?></p>
-                        </div>
-                        <div class="card-body">
-                            <a class="boutons btn btn-outline-success text-dark" type="button" href="prestations.php">+ d'info</a>
-                        </div>
-                    </div>
+
+
+    <div class="container mycontainer col-8 mb-5 mt-5 shadow p-5">
+
+        <h1 class="text-center mt-5">Informations client</h1>
+        
+        <!-- cassé car avant le "toast" -->
+         <?php if ($modifyClientsOk == true) { ?>
+            <p class="text-center text-success">
+                La modification a été effectué avec succès.
+            </p>
+        <?php } ?> 
+
+        <?php
+        // Nous mettons en place une condition pour s'assurer que nous avons selectionné un patient avec le bouton +d'info
+        if (isset($clientInfo)) { ?>
+            <form class="container col-7" action="" method="POST" novalidate>
+                <div class="mb-3">
+                    <label for="nom" class="form-label mt-3">Nom : </label><span class="text-danger">
+                        <?=
+                        $arrayError["nom"] ?? " ";
+                        ?>
+                    </span>
+                    <input value="<?= isset($_POST["nom"]) ? htmlspecialchars($_POST['nom']) : $clientInfo['lastName']?>" name="nom" type="text" class="form-control" id="nom" placeholder="Ex : Dupont..." <?= (isset($_POST["modifyBtn"]) || count($arrayError) != 0) ? "" : 'disabled' ?>>
+
+                    <label for="prenom" class="form-label mt-3">Prénom : </label><span class="text-danger">
+                        <?=
+                        $arrayError["prenom"] ?? "";
+                        ?>
+                    </span>
+                    <input value="<?= isset($_POST["prenom"]) ? htmlspecialchars($_POST["prenom"]) : $clientInfo['firstName'] ?>" name="prenom" type="text" class="form-control" id="prenom" placeholder="Ex : Jean..." <?= (isset($_POST["modifyBtn"]) || count($arrayError) != 0) ? "" : 'disabled' ?>>
+
+                    <label for="phone" class="form-label mt-3">N° de téléphone : </label><span class="text-danger">
+                        <?=
+                        $arrayError["phone"] ?? " ";
+                        ?>
+                    </span>
+                    <input value="<?= isset($_POST["phone"]) ? htmlspecialchars($_POST["phone"]) : $clientInfo['phone'] ?>" name="phone" type="tel" class="form-control" id="phone" placeholder="061256XXXX" <?= (isset($_POST["modifyBtn"]) || count($arrayError) != 0) ? "" : 'disabled' ?>>
+
+                    <label for="mail" class="form-label mt-3">Adresse mail : </label><span class="text-danger">
+                        <?=
+                        $arrayError["mail"] ?? " ";
+                        ?>
+                    </span>
+                    <input type="hidden" name="oldMail" value="<?= $clientInfo['mail'] ?>">
+                    <input value="<?= isset($_POST["mail"]) ? htmlspecialchars($_POST["mail"]) : $clientInfo['mail'] ?>" name="mail" type="email" class="form-control" id="mail" placeholder="Ex : hopital@gmail.com" <?= (isset($_POST["modifyBtn"]) || count($arrayError) != 0) ? "" : 'disabled' ?>>
+
                 </div>
-            <?php } ?>
+
+                <div class="text-center mt-4">
+
+                    <a href="welcom.php" class="btn btn-outline-secondary">Retour gestions des clients</a>
+                    <input type="hidden" name="idClient" value="<?= $clientInfo['user_id'] ?>">
+
+                    <?php if (!isset($_POST["modifyBtn"]) && count($arrayError) == 0) { ?>
+                        <button type="submit" name="modifyBtn" class="btn btn-outline-primary">Modifier la fiche du client</button>
+                    <?php } else { ?>
+                        <button type="submit" name="updateBtn" class="btn btn-outline-success">Enregistrer les modifications</button>
+
+                    <?php   } ?>
+                </div>
+            </form>
+
+
+        <?php   } else { ?>
+            <div class="text-center">
+                <p>Veuillez selectionner un patient s'il vous plait</p>
+                <a class="btn btn-secondary" href="welcome.php">Listes des patients</a>
+            </div>
+        <?php   } ?>
+
+    </div>
+
+    <!-- toast -->
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-success text-white">
+                <strong class="me-auto">Hopital Gouzou</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                La modification a été effectué avec succès.
+            </div>
         </div>
     </div>
+
+
+<!-- JAVASCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+ 
     <!-- FOOTER -->
     <footer class="footerHome border border-secondary">
         <div class="row text-center">
