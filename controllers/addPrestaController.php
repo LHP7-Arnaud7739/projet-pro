@@ -16,8 +16,6 @@ $arrayCatName = $allCatName->catName();
 $allContraindication = new Contraindication();
 $arrayCont = $allContraindication->allContraindication();
 
-
-
 if (isset($_POST["btn-submit-presta"])) {
 
     if (!isset($_POST["categories"])) {
@@ -77,4 +75,8 @@ if (isset($_POST["btn-submit-presta"])) {
 
         $addServicesOk = true;
     }
-}
+};
+
+$allPresta = new Prestation();
+$arrayPresta = $allPresta->allPresta();
+var_dump($arrayPresta);

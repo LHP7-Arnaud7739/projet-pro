@@ -94,10 +94,10 @@ session_start();
                 <label for="time" class="fs-4 form-label mt-3">Durée du soin: </label><span class="text-danger"></span>
                 <select name="time" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                     <option selected>Choisir une durée</option>
-                    <option value="1">20</option>
-                    <option value="2">30</option>
-                    <option value="3">45</option>
-                    <option value="4">60</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="45">45</option>
+                    <option value="60">60</option>
 
                 </select>
 
@@ -106,12 +106,12 @@ session_start();
 
                 <select name="price" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                     <option selected>Choisir un prix</option>
-                    <option value="1">25</option>
-                    <option value="2">30</option>
-                    <option value="3">35</option>
-                    <option value="4">40</option>
-                    <option value="5">45</option>
-                    <option value="6">55</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="55">55</option>
                 </select>
             </div>
 

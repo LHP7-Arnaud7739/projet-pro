@@ -1,7 +1,6 @@
 <?php
-require '../controllers/detailsController.php';
-require '../controllers/indexController.php';
-require_once '../data/array.php';
+require '../controllers/prestaController.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -45,16 +44,16 @@ require_once '../data/array.php';
     </header>
     <!-- DEBUT TABLEAU 2 D -->
     <div class=" mt-5 row row-cols-1 row-cols-md-3 g-4">
-        <?php foreach ($arrayReflexo as $event) { ?>
+        <?php foreach ($arrayPresta as $allPresta) { ?>
             <div class="col">
                 <div class="boutons h-100 text-center card">
-                    <img src="../assets/img/<?= $event["picture"] ?>" class="d-flex justify-content-center photoCardCat " alt="...">
+                    <img src="../assets/img/<?= $allPresta["ser_picture"] ?>" class="d-flex justify-content-center photoCardCat " alt="...">
                     <div class="card-body">
-                        <h2 class="card-title"><?= $event['name'] ?></h2>
-                        <p class="descri card-text"><?= $event['description'] ?></p>
+                        <h2 class="card-title"><?= $allPresta['ser_name'] ?></h2>
+                        <p class="descri card-text"><?= $allPresta['ser_description'] ?></p>
                     </div>
                     <div class="text-center card-footer">
-                        <h3 class="card-text">Temps de la séance : <?= $event['time'] ?><br> Prix de la séance : <?= $event['price'] ?> </h3>
+                        <h3 class="card-text">Temps de la séance : <?= $allPresta['ser_time'] ?><br> Prix de la séance : <?= $allPresta['ser_price'] ?> </h3>
                     </div>
                     <a class="boutons btn btn-outline-success text-dark" type="button" href="pageInscription.php">Prendre un rendez-vous</a>
 
